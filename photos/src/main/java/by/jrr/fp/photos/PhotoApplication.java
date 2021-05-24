@@ -30,5 +30,4 @@ public class PhotoApplication {
 		Iterable<Album> albums = albumClient.getAlbums();
 		albumRepository.saveAll(albums);
 	}
-
 }

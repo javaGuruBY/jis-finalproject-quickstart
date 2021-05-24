@@ -7,7 +7,7 @@ import org.springframework.hateoas.PagedModel;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @FeignClient(name = "PHOTO")
-public interface ProcessorProxy {
+public interface PhotoProxy {
     String photos = "/photos";
     String albums = "/albums";
 

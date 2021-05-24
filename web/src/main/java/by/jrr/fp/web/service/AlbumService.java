@@ -1,7 +1,7 @@
 package by.jrr.fp.web.service;
 
 import by.jrr.fp.web.model.Photo;
-import by.jrr.fp.web.proxy.ProcessorProxy;
+import by.jrr.fp.web.proxy.PhotoProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.PagedModel;
 import org.springframework.stereotype.Service;
@@ -13,10 +13,10 @@ import java.util.List;
 public class AlbumService {
 
     @Autowired
-    ProcessorProxy processorProxy;
+    PhotoProxy photoProxy;
 
     public List<Photo> findAll() {
-        PagedModel<Photo> result = processorProxy.getAllPhotos();
+        PagedModel<Photo> result = photoProxy.getAllPhotos();
         result.getContent();
         return new ArrayList<>(result.getContent());
     }
